@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="de.smartdev.lastorderapp.DtlOffer">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="315dp"
+    android:padding="5dp"
+    android:background="#FF4472C4">
+    <TextView
+        android:id="@+id/dtl_text_offerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/outline_box_black"
+        android:gravity="top|center"/>
+    <TextView
+        android:id="@+id/dtl_text_offerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/outline_box_black"
+        android:layout_below="@+id/dtl_text_offerName"
+        android:layout_marginTop="40dp" />
+    <TextView
+        android:id="@+id/dtl_text_offerAdresse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:background="@drawable/outline_box_black"
+        android:layout_below="@+id/dtl_text_offerText"
+        android:layout_marginTop="40dp" />
+    <TextView
+        android:id="@+id/dtl_text_offerPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_box_black"
+        android:layout_below="@+id/dtl_text_offerAdresse"
+        android:layout_marginTop="40dp" />
+
+
+
+
+    </RelativeLayout>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="313dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/dtl_map"
+        android:layout_gravity="center_horizontal|bottom" />
+</FrameLayout>

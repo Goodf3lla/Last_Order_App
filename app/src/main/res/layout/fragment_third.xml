@@ -1,0 +1,220 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_überschrift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="Anzeigenerstellung"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView_RestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView_überschrift"
+            android:layout_marginTop="40dp"
+            android:padding="10dp"
+            android:text="1. Restaurantname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edit_RestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_RestaurantName"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/outline_box_black"
+            android:hint="Restaurantname hier eingeben."
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/textView_Texteingabe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/edit_RestaurantName"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="2. Texteingabe:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/edit_Anzeigentext"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_Texteingabe"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/outline_box_black"
+            android:hint="Anzeigentext hier eingeben."
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/textView_Adresseingabe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_Anzeigentext"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="3. Adresseingabe:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_Adresseingabe"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView_Adresseingabe"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/outline_box_black"
+            android:hint="Adresse hier eingeben."
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/tag_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_Adresseingabe"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="4. Tags:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <RelativeLayout
+            android:id="@+id/tag_sektion"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tag_topic"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tag_available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:padding="2dp"
+                android:text="Tags" />
+
+            <TextView
+                android:id="@+id/gewählte_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/ausgewaehlte_tag_liste"
+                android:layout_alignParentTop="true"
+                android:layout_alignStart="@+id/ausgewaehlte_tag_liste"
+                android:padding="2dp"
+                android:text="gewählte Tags" />
+
+            <Button
+                android:id="@+id/wählen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/löschen"
+                android:layout_alignStart="@+id/löschen"
+                android:layout_below="@+id/gewählte_tags"
+                android:clickable="false"
+                android:text="wählen" />
+
+            <Button
+                android:id="@+id/löschen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wählen"
+                android:layout_centerHorizontal="true"
+                android:clickable="false"
+                android:text="löschen" />
+
+            <ListView
+                android:id="@+id/alle_tags_Liste"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/wählen"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/wählen"
+                android:background="@drawable/outline_box_black"
+                android:listSelector="#1AFF1A" />
+
+            <ListView
+                android:id="@+id/ausgewaehlte_tag_liste"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_below="@+id/gewählte_tags"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/wählen"
+                android:layout_toRightOf="@+id/wählen"
+                android:background="@drawable/outline_box_black"
+                android:listSelector="#1AFF1A" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/timetolive_sektion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tag_sektion"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:text="5. Angebotsdauer:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <SeekBar
+            android:id="@+id/timetolive_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/timetolive_sektion"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/outline_box_black"
+            android:padding="5dp" />
+
+
+        <Button
+            android:id="@+id/Anzeige_abschicken"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/timetolive_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="bottom"
+            android:text="abschicken" />
+
+
+    </RelativeLayout>
+</ScrollView>

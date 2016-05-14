@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF4472C4">    <!--- FF4472C4 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:padding="8dp"
+            android:layout_gravity="center_horizontal|top"
+            android:id="@+id/map_btn_fltr_nrby"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="              In der Nähe"
+            android:gravity="center|left"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFF"
+            android:background="@drawable/nearby_offer"/>
+        <Button
+            android:id="@+id/map_btn_fltr_temp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:text="              Kurzfristig"
+            android:gravity="center|left"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFF"
+            android:background="@drawable/temporary_offer"
+            android:layout_below="@+id/map_btn_fltr_nrby"/>
+        <Button
+            android:id="@+id/map_btn_fltr_perm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:text="              Dauerhaft"
+            android:gravity="center|left"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFF"
+            android:background="@drawable/permanent_offer"
+            android:layout_below="@+id/map_btn_fltr_temp"/>
+        <Button
+            android:id="@+id/map_btn_go2Profil"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:text="              Profil"
+            android:gravity="center|left"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#FFF"
+            android:background="@drawable/profil_btn"
+            android:layout_below="@+id/map_btn_fltr_perm"/>
+
+    </RelativeLayout>
+
+</ScrollView>
