@@ -1,7 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FF4472C4">
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -16,6 +17,7 @@
             android:layout_centerHorizontal="true"
             android:padding="15dp"
             android:text="Anzeigenerstellung"
+            android:textColor="#FFF"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -27,6 +29,7 @@
             android:layout_marginTop="40dp"
             android:padding="10dp"
             android:text="1. Restaurantname"
+            android:textColor="#FFF"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
@@ -54,6 +57,7 @@
             android:layout_marginTop="30dp"
             android:padding="10dp"
             android:text="2. Texteingabe:"
+            android:textColor="#FFF"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
@@ -80,6 +84,7 @@
             android:layout_marginTop="30dp"
             android:padding="10dp"
             android:text="3. Adresseingabe:"
+            android:textColor="#FFF"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
@@ -106,6 +111,7 @@
             android:layout_marginTop="30dp"
             android:padding="10dp"
             android:text="4. Tags:"
+            android:textColor="#FFF"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <RelativeLayout
@@ -125,7 +131,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:padding="2dp"
-                android:text="Tags" />
+                android:text="Tags"
+                android:textColor="#FFF"/>
 
             <TextView
                 android:id="@+id/gewählte_tags"
@@ -135,7 +142,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/ausgewaehlte_tag_liste"
                 android:padding="2dp"
-                android:text="gewählte Tags" />
+                android:text="gewählte Tags"
+                android:textColor="#FFF"/>
 
             <Button
                 android:id="@+id/wählen"
@@ -188,6 +196,7 @@
             android:layout_marginTop="30dp"
             android:padding="10dp"
             android:text="5. Angebotsdauer:"
+            android:textColor="#FFF"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <SeekBar
