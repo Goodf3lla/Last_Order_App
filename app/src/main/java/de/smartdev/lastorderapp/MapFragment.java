@@ -17,6 +17,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.firebase.client.Firebase;
+import com.firebase.geofire.GeoFire;
+import com.firebase.geofire.GeoLocation;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
@@ -49,8 +52,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,Location
 
     private MapView mMapView;
     private Bundle mBundle;
-    private static final int MY_LOCATION_PERMISSION_REQUEST_CODE = 1;
-    private static final int LOCATION_LAYER_PERMISSION_REQUEST_CODE = 2;
     private HashMap<String,String> marker2keysHash=new HashMap<>();
     private ArrayList<Marker> markers=new ArrayList<>();
 
@@ -66,6 +67,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,Location
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View inflatedView = inflater.inflate(R.layout.fragment_map, container, false);
         MapsInitializer.initialize(getActivity());
+        GeoFire geoFire = new GeoFire(new Firebase("https://lastorder.firebaseio.com/geofire"));
+        geoFire.setLocation("firebase-hq", new GeoLocation(37.7853889, -122.4056973));
+
+
+
 
         mMapView = (MapView) inflatedView.findViewById(R.id.map);
         Button btn_go2Profil = (Button) inflatedView.findViewById(R.id.map_btn_go2Profil);
