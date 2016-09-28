@@ -67,8 +67,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback,Location
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View inflatedView = inflater.inflate(R.layout.fragment_map, container, false);
         MapsInitializer.initialize(getActivity());
-        GeoFire geoFire = new GeoFire(new Firebase("https://lastorder.firebaseio.com/geofire"));
-        geoFire.setLocation("firebase-hq", new GeoLocation(37.7853889, -122.4056973));
+
 
 
 
